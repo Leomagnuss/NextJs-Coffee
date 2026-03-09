@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Caveat, Comfortaa, Geist, Geist_Mono, Great_Vibes, Pattaya } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,17 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const Comfortaa_var = Comfortaa({
+  weight: "variable",
+  subsets: ["latin"],
+});
+
+const CaveatMono = Caveat({
+  weight: "variable",
+  subsets: ["cyrillic"],
+
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +37,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="">
+        <header className="font-[Comfortaa] bg-[#5d2e3d]">
+          <div className="flex justify-center content-center items-center pt-5 mb-5">
+              <Link href="/" className="absolute left-0 flex items-center justify-between p-1 pl-4 pr-4 rounded-r-2xl hover:bg-[#6e3b4b] duration-300">
+                <Image src="/MainLogo.svg" className="" width={30} height={30} alt="" />
+                <h1 className="text-[15px] font-[caveat] pl-3 ">КОФЕЙНЫЙ<br />ДВОРИК</h1>
+              </Link>
+            <ul className="flex justify-around text-2xl w-150">
+              <Link href="/about"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">О нас</li></Link>
+              <li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Меню</li>
+              <li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Контакты</li>
+            </ul>
+          </div>
+          <div className="bg-[#6e3b4b]">
+          <h1 className="text-center h-10 text-[20px] text-[#ffffff] font-[caveat] content-center">ВКУСЫ МИРА В КАЖДОЙ КАПЛЕ</h1>
+          </div>
+        </header>
         {children}
       </body>
     </html>
