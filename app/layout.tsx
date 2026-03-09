@@ -37,10 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body>
         <header className="font-[Comfortaa] bg-[#5d2e3d]">
           <div className="flex justify-center content-center items-center pt-5 mb-5">
-              <Link href="/" className="absolute left-0 flex items-center justify-between p-1 pl-4 pr-4 rounded-r-2xl hover:bg-[#6e3b4b] duration-300">
+              <Link href="/" className=" left-0 flex items-center justify-between p-1 pl-4 pr-4 rounded-2xl hover:bg-[#6e3b4b] duration-300">
                 <Image src="/MainLogo.svg" className="" width={30} height={30} alt="" />
                 <h1 className="text-[15px] font-[caveat] pl-3 ">КОФЕЙНЫЙ<br />ДВОРИК</h1>
               </Link>
@@ -55,6 +55,11 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <footer className="flex p-5 font-[Comfortaa] text-center justify-start items-center bg-[#6e3b4b]">
+          <div className="pr-4">КОФЕЙНЫЙ ДВОРИК</div>
+          <div className="text-[12px] font-extralight">Кофе для человеков</div>
+        </footer>
+      
       </body>
     </html>
   );

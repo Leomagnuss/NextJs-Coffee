@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
   <div className="grid justify-center">
-    <div className="flex content-center items-center justify-center h-125 p-20 rounded-b-2xl font-[Comfortaa] bg-[#ffffff] text-black">
+    <div className="flex content-center items-center justify-center h-125 p-20 mb-10 rounded-b-2xl font-[Comfortaa] bg-[#ffffff] text-black">
       <Image src="/promo.jpeg" className="rounded-2xl" width={300} height={300} alt="" />
       <div className="grid ml-10 w-150 border-black">
         <h1 className="text-[22px] font-extrabold pb-2">Откройте для себя декаф: кофе без кофеина!</h1>
