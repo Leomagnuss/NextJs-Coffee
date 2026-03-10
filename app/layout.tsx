@@ -1,6 +1,6 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Caveat, Comfortaa, Geist, Geist_Mono, Great_Vibes, Pattaya } from "next/font/google";
-import "./globals.css";
 import Image from "next/image";
 import Link from "next/link"; 
 
@@ -22,8 +22,7 @@ const Comfortaa_var = Comfortaa({
 const CaveatMono = Caveat({
   weight: "variable",
   subsets: ["cyrillic"],
-
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,27 +38,31 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className="font-[Comfortaa] bg-[#5d2e3d]">
-          <div className="flex justify-center content-center items-center pt-5 mb-5">
-              <Link href="/" className=" left-0 flex items-center justify-between p-1 pl-4 pr-4 rounded-2xl hover:bg-[#6e3b4b] duration-300">
-                <Image src="/MainLogo.svg" className="" width={30} height={30} alt="" />
-                <h1 className="text-[15px] font-[caveat] pl-3 ">КОФЕЙНЫЙ<br />ДВОРИК</h1>
-              </Link>
-            <ul className="flex justify-around text-2xl w-150">
+          <div className="flex flex-wrap justify-center items-center pt-5 mb-5 max-w-300 mx-auto">
+            <Link href="/" className="flex items-center justify-between p-1 pl-4 pr-4 rounded-2xl hover:bg-[#6e3b4b] duration-300">
+              <Image src="/MainLogo.svg" className="" width={30} height={30} alt="" />
+              <h1 className="text-[15px] font-[caveat] pl-3">КОФЕЙНЫЙ<br />ДВОРИК</h1>
+            </Link>
+            
+            <ul className="flex justify-around text-2xl w-150 shrink-0 gap-4">
               <Link href="/about"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">О нас</li></Link>
               <Link href="/menu"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Меню</li></Link>
               <Link href="/about"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Контакты</li></Link>
             </ul>
           </div>
           <div className="bg-[#6e3b4b]">
-          <h1 className="text-center h-10 text-[20px] text-[#ffffff] font-[caveat] content-center">ВКУСЫ МИРА В КАЖДОЙ КАПЛЕ</h1>
+            <h1 className="text-center h-10 text-[20px] text-[#ffffff] font-[caveat] content-center">ВКУСЫ МИРА В КАЖДОЙ КАПЛЕ</h1>
           </div>
         </header>
-        {children}
-        <footer className="flex p-5 font-[Comfortaa] text-center justify-start items-center bg-[#6e3b4b]">
+        
+        <main className="min-h-screen">
+          {children}
+        </main>
+
+        <footer className="flex p-5 font-[Comfortaa] text-center justify-end items-center bg-[#6e3b4b]">
           <div className="pr-4">КОФЕЙНЫЙ ДВОРИК</div>
           <div className="text-[12px] font-extralight">Кофе для человеков</div>
         </footer>
-      
       </body>
     </html>
   );
