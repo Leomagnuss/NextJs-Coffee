@@ -47,7 +47,7 @@ export default function RootLayout({
             <ul className="flex justify-around text-2xl w-150 shrink-0 gap-4">
               <Link href="/about"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">О нас</li></Link>
               <Link href="/menu"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Меню</li></Link>
-              <Link href="/about"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Контакты</li></Link>
+              <Link href="/contacts"><li className="hover:bg-[#6e3b4b] pl-4 pr-4 pt-1 pb-1 duration-300 rounded-2xl">Контакты</li></Link>
             </ul>
           </div>
           <div className="bg-[#6e3b4b]">
